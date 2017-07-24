@@ -2,86 +2,58 @@
 <html>
 <head>
 <title> Puzzle </title>
-<link href="s.css"
-type= "text/css"
-rel = "stylesheet">
-<style>
-.t3{
-background-color: lightblue;
-border-color: black;}
-</style>
-<script src="p.js">
-</script>
+<link href="s.css" type= "text/css" rel = "stylesheet">
+
+
+<script src="p.js"> </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"> </script>
 </head>
 <body>
 <h1> Puzzle </h1>
 <table >
+
 <tr>
-<td id="p1"class= "square" onclick= "nextMove(this);"> </td>
-<td id="p2"class= "square" onclick= "nextMove(this);"> </td>
+<td id="p1" class= "square">
+	<button class="button" id="button"  onclick= "assign_value();"></button>
+</td>
+
+<td id="p2" class= "square">
+	<button class="button"  onclick= "assign_value();"></button>
+</td>
 </tr>
+
 <tr>
-<td id="p3"class= "square" onclick= "nextMove(this);"> </td>
-<td id="p4"class= "square" onclick= "nextMove(this);"> </td>
+<td id="p3" class= "square">
+	<button class="button"  onclick= "assign_value();"></button>
+</td>
+
+<td id="p4" class= "square">
+	<button class="button"  onclick= "assign_value();"></button>
+</td>
 </tr>
 </table>
 
-<button type="button" onclick= "nextMove();"> Reset </button>
+<button type="button" onclick= "resetGame();"> Reset </button>
 
 <h2> Points Table </h2>
-<table class="t3" border="1" width="400" >
+<table class="t3" border="1" width="600">
 <tr>
-<th width="40"> S NO.</th>
-<th width="220"> NAME </th>
-<th width="140"> POINTS </th>
-</tr> 
+<th width="200"> S NO.</th>
+<th width="200"> NAME </th>
+<th width="200"> POINTS </th>
+</tr> </table>
+<table class="t3" id="myTable" border="1" width="600" >
 
-<tr>
- <td>1 </td> <td id= "s1"  class= "name" > </td><td id= "a1" class="points">   </td>
-</tr>
 
-<tr> 
-<td>2 </td> <td id= "s2"   class= "name"> </td><td id="a2" class="points">   </td>
-</tr>
-
-<tr>
-<td>3 </td> <td id= "s3"  class= "name" > </td><td id="a3" class="points">   </td>
-</tr>
-
-<tr> 
-<td>4 </td> <td id= "s4"   class= "name"> </td><td id="a4" class="points">   </td>
-</tr>
-
-<tr> 
-<td>5 </td> <td id= "s5"   class= "name"> </td> <td  id="a5" class="points"> </td>
-</tr>
-
-<tr> 
-<td>6 </td> <td id= "s6"  class= "name" > </td><td id="a6" class="points">   </td>
-</tr>
-
-<tr> 
-<td>7 </td> <td id= "s7"   class= "name"> </td> <td  id="a7" class="points"> </td>
-</tr>
-
-<tr> 
-<td>8 </td> <td id= "s8"  class= "name"> </td> <td id="a8"  class="points"> </td>
-</tr>
-
-<tr> 
-<td>9</td> <td id= "s9"  class= "name" > </td> <td  id="a9" class="points"> </td>
-</tr>
-
-<tr> 
-<td>10 </td> <td id= "s10"   class= "name"> </td> <td  id="a10" class="points"> </td>
-</tr>
-<tfoot>
-<tr>
-<td> Total </td>
-<td> </td>
-<td> Sum = </td>
-
-</tr></tfoot>
 </table>
+<table border="1" class="t4" width="600">
+<tr>
+<td width="200"> Total </td>
+<td width="200"></td>
+<td width="200" id="demo" > </td>
+
+</tr>
+</table>
+
 </body>
 </html>
